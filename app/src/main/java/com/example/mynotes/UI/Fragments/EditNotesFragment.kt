@@ -1,7 +1,6 @@
 package com.example.mynotes.UI.Fragments
 
 import android.os.Bundle
-import android.os.Handler
 import android.view.*
 import android.widget.TextView
 import androidx.fragment.app.Fragment
