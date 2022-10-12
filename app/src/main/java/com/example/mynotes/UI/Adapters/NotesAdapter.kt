@@ -10,7 +10,7 @@ import com.example.mynotes.Model.Notes
 import com.example.mynotes.UI.Fragments.HomeFragmentDirections
 import com.example.mynotes.databinding.ItemNotesBinding
 
-class NotesAdapter(val requireContext: Context, val notesList: List<Notes>) :
+class NotesAdapter(val requireContext: Context, var notesList: List<Notes>) :
     RecyclerView.Adapter<NotesAdapter.notesViewHolder>() {
 
 
@@ -42,5 +42,10 @@ class NotesAdapter(val requireContext: Context, val notesList: List<Notes>) :
 
     override fun getItemCount(): Int {
         return notesList.size
+    }
+
+    fun filtering(newFilteredList: ArrayList<Notes>) {
+        notesList = newFilteredList
+        notifyDataSetChanged()
     }
 }

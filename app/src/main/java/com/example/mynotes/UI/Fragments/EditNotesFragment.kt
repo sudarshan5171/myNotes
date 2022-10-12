@@ -1,11 +1,13 @@
 package com.example.mynotes.UI.Fragments
 
 import android.os.Bundle
+import android.os.Handler
 import android.view.*
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.mynotes.Model.Notes
 import com.example.mynotes.R
@@ -72,7 +74,7 @@ class EditNotesFragment : Fragment() {
             yes?.setOnClickListener {
                 viewModel.deleteNotes(notes.data.id!!)
                 bottomSheet.dismiss()
-//                Navigation.findNavController(it!!).navigate(R.id.action_editNotesFragment_to_homeFragment2)
+                findNavController().popBackStack()
             }
             no?.setOnClickListener {
                 bottomSheet.dismiss()
