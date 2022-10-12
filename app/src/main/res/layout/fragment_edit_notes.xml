@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    tools:context=".UI.Fragments.EditNotesFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="vertical">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTitle"
+            android:background="@drawable/edittext_shape"
+            android:textColorHint="#d1d1d1"
+            android:layout_marginTop="15dp"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:hint="Title..."
+            android:fontFamily="@font/sans_bold"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/editSubTitle"
+            android:layout_height="wrap_content"
+            android:textColorHint="#d1d1d1"
+            android:maxLines="1"
+            android:background="@drawable/edittext_shape"
+            android:layout_marginTop="15dp"
+            android:padding="10dp"
+            android:hint="SubTitle..."
+            android:fontFamily="@font/sans_regular" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:id="@+id/editDescription"
+            android:textColorHint="#d1d1d1"
+            android:gravity="start"
+            android:background="@drawable/edittext_shape"
+            android:layout_marginTop="15dp"
+            android:padding="10dp"
+            android:hint="Enter your text..."
+            android:fontFamily="@font/sans_regular" />
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/saveNotesBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/red_color"
+        android:src="@drawable/ic_baseline_done_24" />
+
+</FrameLayout>
